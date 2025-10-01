@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExChanger.MainPage">
+
+    <VerticalStackLayout Padding="30" Spacing="15">
+
+        <Label Text="Konwerter PLN → waluta" FontSize="24" HorizontalOptions="Center" />
+
+        <Entry x:Name="plnEntry" Placeholder="Wpisz kwotę w PLN" Keyboard="Numeric" />
+
+        <Label Text="Wybierz walutę docelową:" FontSize="18" />
+
+        <HorizontalStackLayout Spacing="10">
+            <RadioButton x:Name="radioEUR" Content="EUR" GroupName="Currency" IsChecked="True"/>
+            <Label Text="Kurs:" VerticalOptions="Center"/>
+            <Entry Text="4,5" WidthRequest="60" Keyboard="Numeric"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10">
+            <RadioButton x:Name="radioUSD" Content="USD" GroupName="Currency"/>
+            <Label Text="Kurs:" VerticalOptions="Center"/>
+            <Entry Text="4" WidthRequest="60" Keyboard="Numeric"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10">
+            <RadioButton x:Name="radioGBP" Content="GBP" GroupName="Currency"/>
+            <Label Text="Kurs:" VerticalOptions="Center"/>
+            <Entry Text="4,2" WidthRequest="60" Keyboard="Numeric"/>
+        </HorizontalStackLayout>
+
+
+        <Button Text="Przelicz" Clicked="Przelicz_Clicked" />
+
+        <Label x:Name="wynikLabel" FontSize="18" TextColor="Blue" />
+
+    </VerticalStackLayout>
+
+
+</ContentPage>
